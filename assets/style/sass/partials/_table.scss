@@ -6,8 +6,15 @@ input[type=checkbox] {
 .cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7 {
    @include flex-row-center;
    justify-content: flex-start;
-   padding: 12px 26px;
+   padding: 16px 26px;
+   a {
+      small {
+         color: #555562;
+      }
+   } 
 }
+
+   
 
 .table {
    border-radius: 4px;

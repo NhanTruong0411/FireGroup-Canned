@@ -137,7 +137,10 @@ input[type=checkbox] {
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  padding: 12px 26px;
+  padding: 16px 26px;
+}
+.cell-1 a small, .cell-2 a small, .cell-3 a small, .cell-4 a small, .cell-5 a small, .cell-6 a small, .cell-7 a small {
+  color: #555562;
 }
 
 .table {
