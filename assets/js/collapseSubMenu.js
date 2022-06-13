@@ -1,8 +1,9 @@
+// get width of submenu before collapse
 var menuDivWidth = $('.submenu').width();
 
+// toggle collapse/expand menu
 collapseSubMenu = () => {
    let menuDiv = $('.submenu');
-
    let collapseIcon = document.getElementById("collapseIcon");
 
    console.log(menuDivWidth)
@@ -20,6 +21,8 @@ collapseSubMenu = () => {
    }
 }
 
+
+// check and uncheck radio button
 $('input[type=radio]').click(function(){
    if (this.previous) {
       this.checked = false;
