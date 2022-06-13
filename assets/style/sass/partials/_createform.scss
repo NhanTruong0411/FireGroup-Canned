@@ -1,6 +1,5 @@
 .createform {
    margin: 24px 261px 0;
-   width: 600px;
 
    @media all and (max-width: 1200px) {
       margin: 24px 140px 0;
@@ -118,7 +117,7 @@
       flex-direction: column;
       margin-bottom: 12px;
       textarea {
-         max-width: 100%;
+         resize: vertical;
          max-height: 250px;
       }
    }
