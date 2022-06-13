@@ -1,0 +1,266 @@
+// sass ./assets/style/sass/main.scss ./assets/style/css/main.css --watch
+@import "./partials/_partial";
+@import "_reset";
+@import "_global";
+@import "_variables";
+
+@font-face {
+   font-family: 'Gibson';
+   src: url(../../font/Gibson-Bold/Gibson-Bold.ttf) format('truetype');
+}
+
+.wrapper {
+   display: flex;
+   width: auto;
+   height: 900px;
+
+   // mainmenu
+   .mainmenu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__menu {
+         display: flex;
+         flex-direction: column;
+         @include marginTRL(8px, 8px, 8px);
+
+         &-logo {
+            
+            cursor: pointer;
+            width: 72px;
+            height: 36px;
+         }
+
+         &-menu {
+            @include flex-column-center;
+            gap: 8px;
+            margin-top: 20px;
+         }
+
+      }
+
+      &__profile {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 8px;
+         margin-right: 8px;
+         margin-left: 8px;
+         gap: 8px;
+
+         &-avatar {
+            height: 64px;
+            width: 72px;
+            @include flex-row-center;
+            cursor: pointer;
+         }
+      }
+
+   }
+
+   // submenu
+   .submenu {
+      transition: .5s all ease;
+      background-color: $gray-bg;
+
+      &__setting {
+         display: flex;
+         justify-content: space-between;
+         height: 52px;
+
+         &-heading {
+            margin-top: 16px;
+            margin-left: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #828292;
+         }
+
+         &-collapse {
+            margin-top: 7px;
+            margin-right: -22px;
+            z-index: 10;
+            svg g {
+               cursor: pointer;
+            }
+         }
+
+      }
+
+      &__hr {
+         content: "";
+         display: block;
+         height: 0px;
+         border: .1px solid #E9E9EC;
+      }
+
+      &__content {
+         @include marginTRL(32px, 16px, 16px);
+      }
+   }
+
+   // maincontent
+   .maincontent {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px 0px 0px 8px;
+
+      .container {
+         padding-left: 40px;
+         padding-right: 40px;
+         padding-top: 24px;
+      }
+
+      &__title {
+         font-family: 'Gibson', sans-serif;
+         font-weight: bold;
+         font-size: 24px;
+         line-height: 32px;
+         margin-bottom: 20px;
+      }
+
+      &__menu {
+         border-bottom: 1px solid #E0E0E0;
+
+         ul {
+            display: flex;
+            gap: 12px;
+            padding-left: 40px;
+
+            li {
+               color: #6B6B7B;
+               padding: 8px 2px;
+               cursor: pointer;
+               transition: .5s all ease;
+
+               &:hover {
+                  font-weight: 500;
+                  color: #141417;
+
+               }
+            }
+
+            .active {
+               position: relative;
+               font-weight: 500;
+               color: #141417;
+               padding-bottom: 12px;
+
+               &::after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  height: 2px;
+                  background: $primary-color;
+                  border-radius: 3px;
+               }
+            }
+         }
+      }
+
+      &__actionbar {
+         @include flex-row-center;
+         gap: 8px;
+         position: relative;
+
+         &-searchbox {
+            cursor: pointer;
+            flex: 1;
+
+            svg {
+               position: absolute;
+               margin-top: 11.25px;
+               margin-left: 15px;
+               outline: none;
+            }
+
+            input {
+               cursor: pointer;
+               outline: none;
+               width: 100%;
+               height: 36px;
+               padding-left: 40px;
+               border: 1px solid #B4B4BE;
+               border-radius: 4px;
+               transition: .5s all ease;
+            }
+
+            ::placeholder {
+               color: #6B6B7B;
+               padding: 8px 0 8px 0px
+            }
+
+            :hover {
+               border: 1px solid $primary-color;
+            }
+         }
+
+         &-select {
+            select {
+               height: 36px;
+               border: 1px solid #B4B4BE;
+               border-radius: 4px;
+               outline: none;
+               background: #FFFFFF;
+               padding: 8px 24px 8px 12px;
+            }
+
+         }
+
+      }
+
+      &__responses {
+         margin-top: 20px;
+         margin-bottom: 10px;
+         display: flex;
+
+         h3 {
+            color: #9B9BA8;
+            padding: 6px 12px;
+
+            span {
+               color: #141417;
+            }
+         }
+      }
+   }
+
+   .maincontentform {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px 0px 0px 8px;
+
+      &__heading {
+         padding: 24px 40px;
+         display: flex;
+         justify-content: space-between;
+
+         h2 {
+            font-family: 'Gibson';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+            text-transform: capitalize;
+            color: #141417;
+         }
+
+         .button-group {
+            display: flex;
+            gap: 8px;
+         }
+
+
+      }
+
+   }
+}

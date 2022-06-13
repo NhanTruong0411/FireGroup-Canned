@@ -1,0 +1,36 @@
+@import "./partials/_font";
+@import "_variables";
+
+body {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 20px;
+}
+
+@mixin flex-row-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin flex-column-center {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin marginTRL ($top, $right, $left) {
+   margin-top: $top;
+   margin-right: $right;
+   margin-left: $left;
+}
+
+.collapseIcon {
+   margin-left: -104px;
+   margin-top: -1px;
+   transform: rotate(180deg);
+}
+

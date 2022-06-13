@@ -1,0 +1,93 @@
+input[type=checkbox] {
+   width: 16px;
+   height: 16px;
+}
+
+.cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7 {
+   @include flex-row-center;
+   justify-content: flex-start;
+   padding: 12px 26px;
+}
+
+.table {
+   border-radius: 4px;
+   border: 1px solid #E9E9EC;
+   // width: 100%;
+   
+
+   &__header {
+      .cell-header {
+         
+         background: #F6F6F8;
+         font-weight: 700;
+         font-size: 16px;
+         line-height: 24px;
+         color: #555562;
+      }
+   }
+
+
+
+   &--row {
+      display: flex;
+
+      .cell-1 {
+         flex: 0 0 2%;
+         @include flex-row-center;
+         .checkbox-all {
+            visibility: hidden;
+         }
+      }
+   
+      .cell-2 {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         
+         .above {
+            display: flex;
+            img {
+               display: block;
+               max-width:20px;
+               max-height:20px;
+               width: auto;
+            }
+         }
+      }
+   
+      .cell-3 {
+         flex: 0 0 16%;
+         
+      }
+   
+      .cell-4 {
+         flex: 0 0 16%;
+         gap: 8px;
+      }
+   
+      .cell-5 {
+         flex: 0 0 16%;
+         
+         display: flex;
+         gap: 12px;
+         img {
+            width: 20px;
+            height: 20px;
+         }
+      }
+   
+      .cell-6 {
+         flex: 0 0 15%;
+      }
+   
+      .cell-7 {
+         flex: 0 0 10%;
+         gap: 8px;
+         overflow: hidden;
+      }
+
+   }
+
+
+}

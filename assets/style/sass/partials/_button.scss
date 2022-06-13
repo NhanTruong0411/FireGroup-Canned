@@ -1,0 +1,119 @@
+@import "../variables";
+@import "../global";
+
+.button {
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 20px;
+   transition: .5s all ease;
+   cursor: pointer;
+
+   &__menu {
+      @include flex-column-center;
+      height: 64px;
+      width: 72px;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #9B9BA8; 
+      gap: 10px;
+      transition: .5s all ease;
+      &:hover {
+         background-color: $gray-bg;
+         color: $primary-color;
+         svg {
+            path {
+               fill: $primary-color;
+            }
+         }
+         small {
+            color: $primary-color;
+            font-weight: 700;
+         } 
+      }
+   }
+
+   &__submenu {
+      padding: 10px 16px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      transition: .5s all ease;
+      &--active {
+         background-color: #E9E9EC;
+         font-weight: 700;
+         color: $primary-color;
+         transition: .5s all ease;
+      }
+      &:hover {
+         background-color: #E9E9EC;
+         color: $primary-color;
+         font-weight: 700;
+      }
+   }
+
+   &__create {
+      @include flex-row-center;
+      padding: 8px 16px;
+      border-radius: 4px;
+      gap: 4px;
+      background: $primary-color;
+      cursor: pointer;
+      transition: .5s all ease;
+      small {
+         color: #FFFFFF;
+         font-weight: 500;
+      }
+      &:hover {
+         box-shadow: 5px 5px 5px $primary-color;
+      }
+   }
+
+   &__cancel {
+      @include flex-row-center;
+      border-radius: 4px;
+      padding: 8px 16px;
+      background: #E9E9EC;
+      gap: 4px;
+      cursor: pointer;
+      transition: .5s all ease;
+      small {
+         font-weight: 500;
+         color: #141417
+      }
+      &:hover {
+         box-shadow: 5px 5px 5px #E9E9EC;
+      }
+   }
+
+   &__del {
+      cursor: pointer;
+      background: none;
+      padding: 6px 12px;
+      padding-top: 8px;
+      border: none;
+      outline: none;
+      font-weight: 500;
+      color: #EC2B08;
+      border-radius: 4px;
+      transition: .5s all ease;
+      &:hover {
+         color: #ffffff;
+         background-color: #EC2B08;
+      }
+   }
+
+   &--active {
+      background-color: $gray-bg;
+      color: $primary-color;
+      svg {
+         path {
+            fill: $primary-color;
+         }
+      }
+      small {
+         color: $primary-color;
+         font-weight: 700;
+      }
+   }
+
+
+}
