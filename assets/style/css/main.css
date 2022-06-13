@@ -130,6 +130,7 @@ body {
 input[type=checkbox] {
   width: 16px;
   height: 16px;
+  cursor: pointer;
 }
 
 .cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7 {
@@ -165,6 +166,7 @@ input[type=checkbox] {
 }
 .table--row .cell-1 .checkbox-all {
   visibility: hidden;
+  cursor: pointer;
 }
 .table--row .cell-2 {
   flex: 1;
